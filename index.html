@@ -1,180 +1,429 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Endicott - Data Science Portfolio</title>
     <style>
-        body {
-            font-family: sans-serif;
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        h1 {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             color: #333;
-            text-align: center;
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5f7a 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid #1e3a5f;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #1e3a5f;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-info a {
+            color: #1e3a5f;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #5eead4;
         }
 
         h2 {
+            color: #1e3a5f;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            padding-bottom: 10px;
+        }
+
+        h3 {
             color: #333;
-            margin-top: 30px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-size: 1.3em;
+        }
+
+        h4 {
+            color: #555;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .summary {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         ul {
             list-style: none;
-            padding: 0;
+            padding-left: 0;
         }
 
         li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #5eead4;
+            font-weight: bold;
+        }
+
+        .experience-item, .project-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
             margin-bottom: 10px;
         }
 
-        a {
-            color: #007bff;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-category {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .skill-category h4 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        .metric {
+            color: #1e3a5f;
+            font-weight: bold;
+        }
+
+        a.download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #5eead4;
+            color: #1e3a5f;
             text-decoration: none;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .project-box {
-            background-color: #f9f9f9;
-            padding: 20px;
             border-radius: 5px;
-            margin-bottom: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        a.download-btn:hover {
+            background-color: #4dd4be;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Mark Endicott</h1>
-        <p>
-            236 N Harrison Rd, 48823 <br>
-            (810) 666-2471 <br>
-            mendicott.e@gmail.com <br>
-            <a href="https://github.com/MarkEndicott2023">GitHub</a>
-        </p>
+        <header>
+            <h1>Mark Endicott</h1>
+            <p class="tagline">Data Science Student | Analytics & Project Management</p>
+            <div class="contact-info">
+                <span>(810) 666-2471</span>
+                <span>•</span>
+                <a href="mailto:mendicott.e@gmail.com">mendicott.e@gmail.com</a>
+                <span>•</span>
+                <a href="https://github.com/MarkEndicott2023" target="_blank">GitHub</a>
+                <span>•</span>
+                <a href="https://linkedin.com/in/mark-endicott-8091011b0" target="_blank">LinkedIn</a>
+            </div>
+        </header>
 
-        <h2>Professional Summary</h2>
-        <p>
-            Highly motivated data science student with a strong foundation in Python, R, and Excel. Proven ability to manage projects effectively, demonstrated by successful leadership of numerous initiatives at a group home. Seeking a challenging role where I can apply my analytical and problem-solving skills to contribute to a data-driven organization.
-        </p>
-
-        <h2>Experience</h2>
-
-        <h3>Spartan Housing Cooperative (SHC) – House of Apollo (East Lansing, MI)</h3>
-        <h4>Finance Officer & Project Manager</h4>
-        <p>February 2023 – Current</p>
-        <ul>
-            <li>Streamlined financial operations, including utility bill processing, budgeting, and reconciliation.</li>
-            <li>Enhanced transparency and accountability by implementing a robust system for tracking house finances and project progress.</li>
-            <li>Effectively resolved complex financial and logistical challenges, fostering a positive and collaborative living environment.</li>
-        </ul>
-
-        <h3>State of Fitness (East Lansing, MI)</h3>
-        <h4>Personal Training Intern</h4>
-        <p>May 2024 – July 2024</p>
-        <ul>
-            <li>Developed comprehensive exercise programs tailored to individual client needs and goals.</li>
-            <li>Gained practical experience in personal training techniques, emphasizing client safety and progress.</li>
-        </ul>
-
-        <h3>Michigan State University (East Lansing, MI)</h3>
-        <h4>MOTRE Lab Research Assistant (PI: Dr. Rajiv Ranganathan)</h4>
-        <p>January 2023 – April 2024</p>
-        <ul>
-            <li>Conducted independent research, contributing valuable insights into motor learning paradigms.</li>
-            <li>Effectively communicated research findings through engaging presentations and a well-received poster at UURAF.</li>
-            <li>Collaborated effectively with graduate students and faculty to advance research objectives.</li>
-        </ul>
-
-        <h3>Biovate LLC (Cambridge, MA)</h3>
-        <h4>SBIR/STTR Grant Analyst Intern (Mentor: Dr. Steve Ouellette)</h4>
-        <p>May 2020 – August 2020</p>
-        <ul>
-            <li>Developed strong data analysis skills by extracting and analyzing large datasets from NIH RePORTER.</li>
-            <li>Effectively communicated key insights and trends through well-structured reports and presentations.</li>
-            <li>Gained valuable experience in the life sciences industry and the grant application process.</li>
-        </ul>
-
-        <h2>Education</h2>
-
-        <h3>Michigan State University (East Lansing, MI)</h3>
-        <ul>
-            <li>Bachelor of Science, 2026 (Expected)</li>
-            <li>Major: Data Science</li>
-            <li>GPA: 3.2</li>
-        </ul>
-
-        <h3>Mott Community College (Flint, MI)</h3>
-        <ul>
-            <li>Associate of Science, 2022</li>
-            <li>Concentration: Life Sciences</li>
-            <li>GPA: 3.8</li>
-        </ul>
-
-        <h2>Certifications</h2>
-
-        <ul>
-            <li>Google Project Management: Professional Certificate (Nov 2024)</li>
-            <li>Certified Personal Trainer (Jan 2018) - National Academy of Sports Medicine (NASM)</li>
-        </ul>
-
-        <h2>Projects</h2>
-
-        <div class="section-title">
-            <h3>Featured Projects</h3>
-        </div>
-
-        <div class="project-box">
-            <h4>Breaking Fragmentation: A Standard Approach to Motor Learning</h4>
+        <section class="summary">
             <p>
-                Presented research findings on motor learning paradigms at the Michigan State University Undergraduate Research and Arts Forum (UURAF).
+                Data science student with hands-on experience building dashboards, analyzing data, and coordinating multi-stakeholder projects.
+                Demonstrated ability to translate ambiguous requirements into clear metrics, timelines, and actionable insights.
+                Proficient with Python (pandas, polars, NumPy), R (tidyverse), Excel, Power BI/Tableau, and SQL. Proven track record managing
+                <span class="metric">30+ projects</span> and delivering data-driven solutions across research, finance, and analytics domains.
             </p>
-        </div>
-
-        <div class="project-box">
-            <h4>Fair Market Rent as an Affordability Proxy</h4>
-            <p>
-                Collaborated with the SHC treasurer to analyze housing affordability trends using R-Markdown.
-            </p>
-        </div>
-
-        <div class="project-box">
-            <h4>Academic Projects</h4>
-            <p>
-                - Analyzed Fitbit data to identify correlations between activity levels and health outcomes. <br>
-                - Developed a Python-based diet analysis tool to provide personalized dietary recommendations. <br>
-                - Utilized R to determine the most predictive factors for football game outcomes.
-            </p>
-        </div>
+        </section>
 
         <h2>Skills</h2>
 
-        <ul>
-            <li>Data Analysis & Manipulation (Python, R)</li>
-            <li>Data Visualization (Python, R)</li>
-            <li>Statistical Analysis (Python, R)</li>
-            <li>Problem-Solving & Critical Thinking</li>
-            <li>Communication, Collaboration, & Teamwork</li>
-            <li>Project Management (Microsoft Excel)</li>
-        </ul>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming & Analysis</h4>
+                <ul>
+                    <li>Python (pandas, polars, NumPy)</li>
+                    <li>R (tidyverse, data.table)</li>
+                    <li>SQL (basic queries)</li>
+                    <li>Git/GitHub version control</li>
+                </ul>
+            </div>
 
-        <h2>References</h2>
-        <p>Available upon request</p>
+            <div class="skill-category">
+                <h4>Data Tools & Platforms</h4>
+                <ul>
+                    <li>Power BI / Tableau</li>
+                    <li>Excel / Google Sheets</li>
+                    <li>API data extraction</li>
+                    <li>Data wrangling & preprocessing</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h4>Project Management</h4>
+                <ul>
+                    <li>KPI/OKR design</li>
+                    <li>Timeline & risk tracking</li>
+                    <li>Stakeholder coordination</li>
+                    <li>Documentation & reporting</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Featured Projects</h2>
+
+        <div class="project-box">
+            <h3>Interactive "ChainSight" Dashboarding & MAPE Tracking</h3>
+            <p class="date">September 2025 | MSU Broad Datathon</p>
+            <ul>
+                <li>Prototyped interactive <span class="metric">Power BI dashboard</span> for Connected Midland's "ChainSight" supply chain platform</li>
+                <li>Implemented <span class="metric">DAX KPIs</span> (on-time %, delay counts, forecast error/MAPE) with slicers, parameter controls, and bookmarks</li>
+                <li>Proposed lightweight data-validation rubric and weekly refresh to improve trust and user adoption</li>
+            </ul>
+        </div>
+
+        <div class="project-box">
+            <h3>LLM Framework for Rare Disease Mechanism Mapping</h3>
+            <p class="date">March 2025 | Harvard Rare-Disease Hackathon</p>
+            <ul>
+                <li>Collaborated in <span class="metric">5-person team</span> to develop LLM-based tool classifying gene-disease mechanisms and matching therapies</li>
+                <li>Streamlined pre-IND drug discovery through automated data extraction and analysis</li>
+            </ul>
+        </div>
+
+        <div class="project-box">
+            <h3>Apollo Housing Management: Financial & Task Analytics</h3>
+            <p class="date">Ongoing | October 2024 – Present</p>
+            <ul>
+                <li>Collaborated with SHC treasurer to analyze fair market rent as proxy for housing affordability</li>
+                <li>Produced dashboards tracking financial trends, utility usage, and chore adoption across <span class="metric">18-member</span> home</li>
+                <li>Delivered <span class="metric">1 R-Markdown report</span> to Spartan Housing Cooperative with data-driven insights for operational improvements</li>
+            </ul>
+        </div>
+
+        <div class="project-box">
+            <h3>Algorithmic Trading Data Pipeline</h3>
+            <p class="date">2024 | Independent Project with Senior Developer Mentorship</p>
+            <ul>
+                <li>Built modular cryptocurrency trading bot in <span class="metric">Python</span> with <span class="metric">ETL pipelines</span> for data ingestion via REST/WebSocket APIs</li>
+                <li>Implemented feature engineering, backtesting, and strategy "harness" for rapid A/B prototyping</li>
+                <li>Managed data structures/pipelines for reliability and speed in high-volatility markets</li>
+            </ul>
+            <div style="margin-top: 20px;">
+                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Granular Price Data Using Vega-Altair:</p>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="trading_bot_altair_vega_graph.png" alt="Trading Bot Strategy Performance Graph" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Project Artifacts:</p>
+                <p style="font-style: italic; color: #666; margin-bottom: 10px; text-align: center;">Note: The backtester code is an example draft, not the production code used.</p>
+                <div style="text-align: center;">
+                    <a href="trading_bot_simple_backtester_code.py" download class="download-btn">
+                        Download Backtester Code (.py)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <h3>Breaking Fragmentation: A Standard Approach to Motor Learning</h3>
+            <p class="date">March 2024 | Presented at UURAF</p>
+            <ul>
+                <li>Evaluated <span class="metric">64 motor learning tasks</span> on reproducibility, scalability, and experimental rigor using Likert-scale metrics</li>
+                <li>Performed analysis and visualization in <span class="metric">Excel</span>; synthesized findings into standardized framework</li>
+                <li>Presented poster at MSU's Undergraduate Research and Arts Forum</li>
+            </ul>
+            <div style="margin-top: 20px;">
+                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Final Poster Draft:</p>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="uuraf_photo_2.png" alt="UURAF Final Poster Draft" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Precursor Draft:</p>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="uuraf_photo_3.png" alt="UURAF Precursor Draft" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                </div>
+                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Project Artifacts:</p>
+                <div style="text-align: center;">
+                    <a href="uuraf_spreadsheet.xlsx" download class="download-btn">
+                        📊 Download Analysis Spreadsheet (.xlsx)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <h2>Experience</h2>
+
+        <div class="experience-item">
+            <h3>Finance & Project Officer</h3>
+            <h4>Spartan Housing Cooperative (Apollo) | East Lansing, MI</h4>
+            <p class="date">February 2023 – September 2025</p>
+            <ul>
+                <li>Managed budgets, audits, and reconciliation for <span class="metric">18-member</span> co-op using <span class="metric">Excel/Google Sheets</span>; produced bi-monthly financial reports</li>
+                <li>Coordinated <span class="metric">30+ projects</span> end-to-end, tracking timelines and outcomes; built dashboards in <span class="metric">Tableau</span> for operational insights</li>
+                <li>Standardized meeting documentation and served as primary liaison with SHC leadership</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Personal Training Intern</h3>
+            <h4>State of Fitness | East Lansing, MI</h4>
+            <p class="date">May 2024 – July 2024</p>
+            <ul>
+                <li>Completed <span class="metric">170 hours</span> of guided training practice; assisted with customized workout plans and client progress tracking</li>
+                <li>Supported fitness sessions focused on strength, mobility, and endurance training</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Research Assistant</h3>
+            <h4>MOTRE Lab, Michigan State University (PI: Dr. Rajiv Ranganathan) | East Lansing, MI</h4>
+            <p class="date">January 2023 – April 2024</p>
+            <ul>
+                <li>Evaluated <span class="metric">64 task paradigms</span> using Likert-scale assessment; extracted and analyzed datasets with <span class="metric">Excel</span></li>
+                <li>Presented results at <span class="metric">UURAF</span>; synthesized findings into standardized framework</li>
+                <li>Supported design and piloting of graduate-level motor learning studies</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Food Service Team Member</h3>
+            <h4>Noodles & Company | East Lansing, MI</h4>
+            <p class="date">July 2022 – March 2023</p>
+            <ul>
+                <li>Prepared <span class="metric">50+ meals per shift</span> with consistent attention to quality, timing, and food safety standards</li>
+                <li>Collaborated with team to streamline workflow, reducing prep time and food waste</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Grant Analyst Intern</h3>
+            <h4>Biovate LLC | Cambridge, MA (Remote)</h4>
+            <p class="date">May 2020 – August 2020</p>
+            <ul>
+                <li>Analyzed NIH RePORTER data across <span class="metric">100+ biotech firms</span> using <span class="metric">Excel</span> to identify funding trends</li>
+                <li>Built <span class="metric">weekly PowerPoint reports</span> with data visualizations informing strategic biotech outreach</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Food Service Team Member</h3>
+            <h4>Texas Roadhouse | Grand Junction, CO; Cheyenne, WY; Flint, MI</h4>
+            <p class="date">June 2018 – January 2021</p>
+            <ul>
+                <li>Delivered high-quality service across multiple roles (busser, server, food runner) serving <span class="metric">200+ guests per shift</span></li>
+                <li>Trained and onboarded new staff, maintaining consistent service standards across locations</li>
+            </ul>
+        </div>
+
+        <h2>Education</h2>
+
+        <div class="experience-item">
+            <h3>Bachelor of Science, Data Science</h3>
+            <h4>Michigan State University | East Lansing, MI</h4>
+            <p class="date">Expected December 2026 | GPA: 3.25/4.0</p>
+            <p><strong>Minor:</strong> Information Technology</p>
+            <p><strong>Technical Courses:</strong></p>
+            <ul style="margin-top: 8px;">
+                <li>Computational Modeling & Data Analysis I & II (CMSE 201, 202)</li>
+                <li>Probability & Statistics for Data Scientists (STT 380)</li>
+                <li>Algorithms & Data Structures (CSE 331)</li>
+                <li>Introduction to Data Science (STT 180)</li>
+                <li>Matrix Algebra I (MTH 314)</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Associate of Science, Life Sciences</h3>
+            <h4>Mott Community College | Flint, MI</h4>
+            <p class="date">Graduated 2022 | GPA: 3.8/4.0</p>
+        </div>
+
+        <h2>Certifications</h2>
+
+        <div class="experience-item">
+            <ul>
+                <li><strong>Google Project Management Professional Certificate</strong> – November 2024</li>
+                <li><strong>NASM Certified Personal Trainer (CPT)</strong> – January 2018</li>
+            </ul>
+        </div>
+
+        <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee; color: #666;">
+            <p>References available upon request</p>
+            <p style="margin-top: 10px;">East Lansing, MI 48823</p>
+        </footer>
 
     </div>
 
