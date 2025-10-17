@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5f7a 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -31,13 +31,12 @@
 
         header {
             text-align: center;
-            border-bottom: 3px solid #1e3a5f;
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
 
         h1 {
-            color: #1e3a5f;
+            color: #1e3a8a;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
@@ -57,7 +56,7 @@
         }
 
         .contact-info a {
-            color: #1e3a5f;
+            color: #1e3a8a;
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -66,8 +65,55 @@
             color: #5eead4;
         }
 
+        /* Tab Navigation */
+        .tab-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #1e3a8a;
+        }
+
+        .tab-button {
+            background-color: #f8f9fa;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #1e3a8a;
+            font-weight: 600;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-button:hover {
+            background-color: #e9ecef;
+        }
+
+        .tab-button.active {
+            background-color: #5eead4;
+            color: #1e3a8a;
+            border-bottom: 3px solid #1e3a8a;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         h2 {
-            color: #1e3a5f;
+            color: #1e3a8a;
             margin-top: 35px;
             margin-bottom: 15px;
             font-size: 1.8em;
@@ -92,7 +138,8 @@
             background-color: #f8f9fa;
             padding: 20px;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid #5eead4;
         }
 
         ul {
@@ -119,6 +166,7 @@
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
+            border-left: 4px solid #5eead4;
         }
 
         .date {
@@ -138,15 +186,16 @@
             background-color: #f8f9fa;
             padding: 15px;
             border-radius: 8px;
+            border-left: 3px solid #5eead4;
         }
 
         .skill-category h4 {
-            color: #1e3a5f;
+            color: #1e3a8a;
             margin-bottom: 10px;
         }
 
         .metric {
-            color: #1e3a5f;
+            color: #1e3a8a;
             font-weight: bold;
         }
 
@@ -154,18 +203,80 @@
             display: inline-block;
             padding: 10px 20px;
             background-color: #5eead4;
-            color: #1e3a5f;
+            color: #1e3a8a;
             text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
             transition: background-color 0.3s, transform 0.2s;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 5px;
         }
 
         a.download-btn:hover {
             background-color: #4dd4be;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .image-label {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .event-badge {
+            display: inline-block;
+            background-color: #5eead4;
+            color: #1e3a8a;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .courses-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .course-item {
+            background-color: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 6px;
+            border-left: 3px solid #5eead4;
+        }
+
+        .course-name {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 4px;
+        }
+
+        .course-relevance {
+            color: #555;
+            font-size: 0.95em;
         }
 
         @media (max-width: 768px) {
@@ -181,6 +292,23 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .tab-navigation {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .tab-button {
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            color: #666;
         }
     </style>
 </head>
@@ -201,231 +329,294 @@
             </div>
         </header>
 
-        <section class="summary">
-            <p>
-                Data science student with hands-on experience building dashboards, analyzing data, and coordinating multi-stakeholder projects.
-                Demonstrated ability to translate ambiguous requirements into clear metrics, timelines, and actionable insights.
-                Proficient with Python (pandas, polars, NumPy), R (tidyverse), Excel, Power BI/Tableau, and SQL. Proven track record managing
-                <span class="metric">30+ projects</span> and delivering data-driven solutions across research, finance, and analytics domains.
-            </p>
-        </section>
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button class="tab-button active" onclick="openTab(event, 'about')">About Mark</button>
+            <button class="tab-button" onclick="openTab(event, 'projects')">Projects</button>
+            <button class="tab-button" onclick="openTab(event, 'experience')">Experience</button>
+        </div>
 
-        <h2>Skills</h2>
+        <!-- About Mark Tab -->
+        <div id="about" class="tab-content active">
+            <h2>Professional Summary</h2>
+            <div class="summary">
+                <p>
+                    Data science student with hands-on experience building dashboards, analyzing data, and coordinating multi-stakeholder projects.
+                    Demonstrated ability to translate ambiguous requirements into clear metrics, timelines, and actionable insights.
+                    Proficient with Python, Excel, Tableau, and SQL. Proven track record managing <span class="metric">30+ projects</span>
+                    and delivering data-driven solutions across research, finance, and analytics domains.
+                </p>
+            </div>
 
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h4>Programming & Analysis</h4>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming & Analysis</h4>
+                    <ul>
+                        <li>Python (pandas, NumPy, Altair/Vega)</li>
+                        <li>SQL</li>
+                        <li>Git/GitHub</li>
+                        <li>ETL pipelines</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Data Tools & Platforms</h4>
+                    <ul>
+                        <li>Tableau dashboards</li>
+                        <li>Excel analysis & visualization</li>
+                        <li>API data extraction</li>
+                        <li>Statistical modeling</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Project Management</h4>
+                    <ul>
+                        <li>Agile methods</li>
+                        <li>Meeting facilitation</li>
+                        <li>Stakeholder coordination</li>
+                        <li>Documentation & reporting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Education</h2>
+            <div class="experience-item">
+                <h3>Bachelor of Science, Data Science</h3>
+                <h4>Michigan State University | East Lansing, MI</h4>
+                <p class="date">Expected December 2026 | GPA: 3.25/4.0</p>
+                <p><strong>Minor:</strong> Information Technology</p>
+            </div>
+
+            <h2>Technical Courses</h2>
+            <div class="courses-list">
+                <div class="course-item">
+                    <div class="course-name">Computational Modeling & Data Analysis II (CMSE 202)</div>
+                    <div class="course-relevance">Advanced computational modeling, simulation, and data analysis workflows</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Introduction to Data Science (STT 180)</div>
+                    <div class="course-relevance">Data wrangling, visualization, exploratory analysis, and statistical methods</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Probability & Statistics for Data Scientists (STT 380)</div>
+                    <div class="course-relevance">Statistical inference, hypothesis testing, and probability theory for data analysis</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Algorithms and Data Structures (CSE 331)</div>
+                    <div class="course-relevance">Computational complexity, algorithm design, and efficient data structure implementation</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Matrix Algebra I (MTH 314)</div>
+                    <div class="course-relevance">Linear algebra foundations for machine learning and data transformations</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div id="projects" class="tab-content">
+            <h2>Featured Projects</h2>
+
+            <div class="project-box">
+                <h3>Algorithmic Trading in High-Volatility Markets</h3>
+                <p class="date">2024 | Independent Project with Senior Developer Mentorship</p>
                 <ul>
-                    <li>Python (pandas, polars, NumPy)</li>
-                    <li>R (tidyverse, data.table)</li>
-                    <li>SQL (basic queries)</li>
-                    <li>Git/GitHub version control</li>
+                    <li>Built modular cryptocurrency trading bot in <span class="metric">Python</span> with <span class="metric">ETL pipelines</span> for data ingestion via REST/WebSocket APIs</li>
+                    <li>Implemented feature engineering, backtesting, and strategy harness for rapid A/B prototyping</li>
+                    <li>Managed data structures and pipelines for reliability and speed in high-volatility markets</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <p class="image-label">Granular Price Data Using Vega-Altair:</p>
+                    <div class="image-container">
+                        <img src="assets/trading_bot_altair_vega_graph.png" alt="Trading Bot Visualization Using Vega-Altair">
+                    </div>
+                    <p class="image-label" style="margin-top: 20px;">Project Artifacts:</p>
+                    <p class="note">Note: This is an example draft, not the code actually used.</p>
+                    <div style="text-align: center;">
+                        <a href="assets/trading_bot_simple_backtester_code.py" download class="download-btn">
+                            Download Backtester Code (.py)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <h3>Breaking Fragmentation: A Standard Approach to Motor Learning</h3>
+                <p class="date">March 2024 | Presented at UURAF</p>
+                <ul>
+                    <li>Evaluated <span class="metric">64 motor learning tasks</span> on reproducibility, scalability, and experimental rigor using Likert-scale metrics</li>
+                    <li>Performed analysis and visualization in <span class="metric">Excel</span>; synthesized findings into standardized framework</li>
+                    <li>Presented poster at MSU's Undergraduate Research and Arts Forum</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <p class="image-label">Final Poster Draft:</p>
+                    <div class="image-container">
+                        <img src="assets/uuraf_photo_2.png" alt="Breaking Fragmentation Final Poster">
+                    </div>
+                    <p class="image-label" style="margin-top: 20px;">Precursor Draft:</p>
+                    <div class="image-container">
+                        <img src="assets/uuraf_photo_3.png" alt="Breaking Fragmentation Precursor Draft">
+                    </div>
+                    <p class="image-label" style="margin-top: 20px;">Project Artifact:</p>
+                    <div style="text-align: center;">
+                        <a href="assets/uuraf_spreadsheet.xlsx" download class="download-btn">
+                            Download Analysis Spreadsheet (.xlsx)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <h3>Interactive Supply Chain Dashboarding & MAPE Tracking</h3>
+                <p class="date">September 2025<span class="event-badge">MSU Broad Datathon</span></p>
+                <ul>
+                    <li>Prototyped interactive dashboard for Connected Midland's supply chain platform using Tableau-style visualizations</li>
+                    <li>Implemented KPIs (on-time delivery %, delay counts, forecast error/MAPE) with slicers and parameter controls</li>
+                    <li>Proposed data-validation rubric and weekly refresh to improve trust and user adoption</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <p class="image-label">Building a User-Friendly Dashboard:</p>
+                    <div class="image-container">
+                        <img src="assets/broad_datathon_visual.png" alt="Broad Datathon Dashboard Visualization">
+                    </div>
+                    <p class="image-label" style="margin-top: 20px;">Project Artifacts:</p>
+                    <div style="text-align: center;">
+                        <a href="assets/broad_datathon_case_file.pdf" download class="download-btn">
+                            Download Case File (.pdf)
+                        </a>
+                        <a href="assets/broad_datathon_slide_deck.pdf" download class="download-btn">
+                            Download Slide Deck (.pdf)
+                        </a>
+                        <a href="assets/broad_datathon_BI_file.pbix" download class="download-btn">
+                            Download Power BI File (.pbix)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <h3>LLM Framework for Rare Disease Mechanism Mapping</h3>
+                <p class="date">March 2025<span class="event-badge">Harvard Hackathon</span></p>
+                <ul>
+                    <li>Collaborated in <span class="metric">5-person team</span> to develop NLP LLM-based tool with <span class="metric">Python</span> for classifying gene-disease mechanisms and matching therapies</li>
+                    <li>Streamlined pre-IND drug discovery through automated data extraction and analysis</li>
+                    <li>Collaborated via Git and cloud-based development tools</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <p class="image-label">Project Artifacts:</p>
+                    <div style="text-align: center;">
+                        <a href="assets/hack_rare_slide_deck.pdf" download class="download-btn">
+                            Download Slide Deck (.pdf)
+                        </a>
+                        <a href="assets/hack_rare_readme.md" download class="download-btn">
+                            Download README (.md)
+                        </a>
+                        <a href="assets/hack_rare_semantic_api.ipynb" download class="download-btn">
+                            Download Semantic API Notebook (.ipynb)
+                        </a>
+                        <a href="assets/hack_rare_semantic_scholar_extraction.csv" download class="download-btn">
+                            Download Data Extraction (.csv)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <h3>Apollo Housing Management: Financial & Task Analytics</h3>
+                <p class="date">Ongoing | October 2024 – Present</p>
+                <ul>
+                    <li>Collaborated with SHC treasurer to analyze fair market rent as proxy for housing affordability</li>
+                    <li>Produced dashboards tracking financial trends, utility usage, and chore adoption across <span class="metric">18-member</span> home</li>
+                    <li>Delivered <span class="metric">1 markdown report</span> to Spartan Housing Cooperative with data-driven insights for operational improvements</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Experience Tab -->
+        <div id="experience" class="tab-content">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <h3>Finance & Project Officer</h3>
+                <h4>Apollo Cooperative (SHC) | East Lansing, MI</h4>
+                <p class="date">February 2023 – September 2025</p>
+                <ul>
+                    <li>Built dashboards in <span class="metric">Tableau</span> for house member chore tracking and reporting</li>
+                    <li>Managed audits, utilities, and budgets using <span class="metric">Excel</span></li>
+                    <li>Led <span class="metric">30+ projects</span> using <span class="metric">Agile methods</span> for team coordination and small-scale sprints</li>
+                    <li>Presented metrics and updates in recurring house meetings</li>
                 </ul>
             </div>
 
-            <div class="skill-category">
-                <h4>Data Tools & Platforms</h4>
+            <div class="experience-item">
+                <h3>Research Assistant</h3>
+                <h4>MOTRE Lab, Michigan State University (PI: Dr. Rajiv Ranganathan) | East Lansing, MI</h4>
+                <p class="date">January 2023 – April 2024</p>
                 <ul>
-                    <li>Power BI / Tableau</li>
-                    <li>Excel / Google Sheets</li>
-                    <li>API data extraction</li>
-                    <li>Data wrangling & preprocessing</li>
+                    <li>Extracted and analyzed experimental task data with <span class="metric">Excel</span> from scientific literature</li>
+                    <li>Supported peer experimental design and hypothesis testing by piloting experiments</li>
+                    <li>Visualized research via lab PowerPoint presentations, culminating in poster at major university symposium</li>
                 </ul>
             </div>
 
-            <div class="skill-category">
-                <h4>Project Management</h4>
+            <div class="experience-item">
+                <h3>Grant Analyst Intern</h3>
+                <h4>Biovate LLC | Cambridge, MA</h4>
+                <p class="date">May 2020 – August 2020</p>
                 <ul>
-                    <li>KPI/OKR design</li>
-                    <li>Timeline & risk tracking</li>
-                    <li>Stakeholder coordination</li>
-                    <li>Documentation & reporting</li>
+                    <li>Analyzed NIH RePORTER data on <span class="metric">100+ biotech firms</span> using <span class="metric">Excel</span></li>
+                    <li>Produced weekly visual reports on funding trends to guide biotech outreach strategy</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Food Service Team Member</h3>
+                <h4>Noodles & Company | East Lansing, MI</h4>
+                <p class="date">July 2022 – March 2023</p>
+                <ul>
+                    <li>Prepared <span class="metric">50+ meals per shift</span> with consistent attention to quality, timing, and food safety standards</li>
+                    <li>Collaborated with team to streamline workflow, reducing prep time and food waste</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Food Service Team Member</h3>
+                <h4>Texas Roadhouse | Grand Junction, CO; Cheyenne, WY; Flint, MI</h4>
+                <p class="date">June 2018 – January 2021</p>
+                <ul>
+                    <li>Delivered high-quality service across multiple roles (busser, server, food runner) serving <span class="metric">200+ guests per shift</span></li>
+                    <li>Trained and onboarded new staff, maintaining consistent service standards across locations</li>
                 </ul>
             </div>
         </div>
 
-        <h2>Featured Projects</h2>
-
-        <div class="project-box">
-            <h3>Interactive "ChainSight" Dashboarding & MAPE Tracking</h3>
-            <p class="date">September 2025 | MSU Broad Datathon</p>
-            <ul>
-                <li>Prototyped interactive <span class="metric">Power BI dashboard</span> for Connected Midland's "ChainSight" supply chain platform</li>
-                <li>Implemented <span class="metric">DAX KPIs</span> (on-time %, delay counts, forecast error/MAPE) with slicers, parameter controls, and bookmarks</li>
-                <li>Proposed lightweight data-validation rubric and weekly refresh to improve trust and user adoption</li>
-            </ul>
-        </div>
-
-        <div class="project-box">
-            <h3>LLM Framework for Rare Disease Mechanism Mapping</h3>
-            <p class="date">March 2025 | Harvard Rare-Disease Hackathon</p>
-            <ul>
-                <li>Collaborated in <span class="metric">5-person team</span> to develop LLM-based tool classifying gene-disease mechanisms and matching therapies</li>
-                <li>Streamlined pre-IND drug discovery through automated data extraction and analysis</li>
-            </ul>
-        </div>
-
-        <div class="project-box">
-            <h3>Apollo Housing Management: Financial & Task Analytics</h3>
-            <p class="date">Ongoing | October 2024 – Present</p>
-            <ul>
-                <li>Collaborated with SHC treasurer to analyze fair market rent as proxy for housing affordability</li>
-                <li>Produced dashboards tracking financial trends, utility usage, and chore adoption across <span class="metric">18-member</span> home</li>
-                <li>Delivered <span class="metric">1 R-Markdown report</span> to Spartan Housing Cooperative with data-driven insights for operational improvements</li>
-            </ul>
-        </div>
-
-        <div class="project-box">
-            <h3>Algorithmic Trading Data Pipeline</h3>
-            <p class="date">2024 | Independent Project with Senior Developer Mentorship</p>
-            <ul>
-                <li>Built modular cryptocurrency trading bot in <span class="metric">Python</span> with <span class="metric">ETL pipelines</span> for data ingestion via REST/WebSocket APIs</li>
-                <li>Implemented feature engineering, backtesting, and strategy "harness" for rapid A/B prototyping</li>
-                <li>Managed data structures/pipelines for reliability and speed in high-volatility markets</li>
-            </ul>
-            <div style="margin-top: 20px;">
-                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Granular Price Data Using Vega-Altair:</p>
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="trading_bot_altair_vega_graph.png" alt="Trading Bot Strategy Performance Graph" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                </div>
-                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Project Artifacts:</p>
-                <p style="font-style: italic; color: #666; margin-bottom: 10px; text-align: center;">Note: The backtester code is an example draft, not the production code used.</p>
-                <div style="text-align: center;">
-                    <a href="trading_bot_simple_backtester_code.py" download class="download-btn">
-                        Download Backtester Code (.py)
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-box">
-            <h3>Breaking Fragmentation: A Standard Approach to Motor Learning</h3>
-            <p class="date">March 2024 | Presented at UURAF</p>
-            <ul>
-                <li>Evaluated <span class="metric">64 motor learning tasks</span> on reproducibility, scalability, and experimental rigor using Likert-scale metrics</li>
-                <li>Performed analysis and visualization in <span class="metric">Excel</span>; synthesized findings into standardized framework</li>
-                <li>Presented poster at MSU's Undergraduate Research and Arts Forum</li>
-            </ul>
-            <div style="margin-top: 20px;">
-                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Final Poster Draft:</p>
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="uuraf_photo_2.png" alt="UURAF Final Poster Draft" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                </div>
-                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Precursor Draft:</p>
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="uuraf_photo_3.png" alt="UURAF Precursor Draft" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                </div>
-                <p style="font-weight: 600; color: #1e3a5f; margin-bottom: 10px;">Project Artifacts:</p>
-                <div style="text-align: center;">
-                    <a href="uuraf_spreadsheet.xlsx" download class="download-btn">
-                        📊 Download Analysis Spreadsheet (.xlsx)
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <h2>Experience</h2>
-
-        <div class="experience-item">
-            <h3>Finance & Project Officer</h3>
-            <h4>Spartan Housing Cooperative (Apollo) | East Lansing, MI</h4>
-            <p class="date">February 2023 – September 2025</p>
-            <ul>
-                <li>Managed budgets, audits, and reconciliation for <span class="metric">18-member</span> co-op using <span class="metric">Excel/Google Sheets</span>; produced bi-monthly financial reports</li>
-                <li>Coordinated <span class="metric">30+ projects</span> end-to-end, tracking timelines and outcomes; built dashboards in <span class="metric">Tableau</span> for operational insights</li>
-                <li>Standardized meeting documentation and served as primary liaison with SHC leadership</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>Personal Training Intern</h3>
-            <h4>State of Fitness | East Lansing, MI</h4>
-            <p class="date">May 2024 – July 2024</p>
-            <ul>
-                <li>Completed <span class="metric">170 hours</span> of guided training practice; assisted with customized workout plans and client progress tracking</li>
-                <li>Supported fitness sessions focused on strength, mobility, and endurance training</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>Research Assistant</h3>
-            <h4>MOTRE Lab, Michigan State University (PI: Dr. Rajiv Ranganathan) | East Lansing, MI</h4>
-            <p class="date">January 2023 – April 2024</p>
-            <ul>
-                <li>Evaluated <span class="metric">64 task paradigms</span> using Likert-scale assessment; extracted and analyzed datasets with <span class="metric">Excel</span></li>
-                <li>Presented results at <span class="metric">UURAF</span>; synthesized findings into standardized framework</li>
-                <li>Supported design and piloting of graduate-level motor learning studies</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>Food Service Team Member</h3>
-            <h4>Noodles & Company | East Lansing, MI</h4>
-            <p class="date">July 2022 – March 2023</p>
-            <ul>
-                <li>Prepared <span class="metric">50+ meals per shift</span> with consistent attention to quality, timing, and food safety standards</li>
-                <li>Collaborated with team to streamline workflow, reducing prep time and food waste</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>Grant Analyst Intern</h3>
-            <h4>Biovate LLC | Cambridge, MA (Remote)</h4>
-            <p class="date">May 2020 – August 2020</p>
-            <ul>
-                <li>Analyzed NIH RePORTER data across <span class="metric">100+ biotech firms</span> using <span class="metric">Excel</span> to identify funding trends</li>
-                <li>Built <span class="metric">weekly PowerPoint reports</span> with data visualizations informing strategic biotech outreach</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>Food Service Team Member</h3>
-            <h4>Texas Roadhouse | Grand Junction, CO; Cheyenne, WY; Flint, MI</h4>
-            <p class="date">June 2018 – January 2021</p>
-            <ul>
-                <li>Delivered high-quality service across multiple roles (busser, server, food runner) serving <span class="metric">200+ guests per shift</span></li>
-                <li>Trained and onboarded new staff, maintaining consistent service standards across locations</li>
-            </ul>
-        </div>
-
-        <h2>Education</h2>
-
-        <div class="experience-item">
-            <h3>Bachelor of Science, Data Science</h3>
-            <h4>Michigan State University | East Lansing, MI</h4>
-            <p class="date">Expected December 2026 | GPA: 3.25/4.0</p>
-            <p><strong>Minor:</strong> Information Technology</p>
-            <p><strong>Technical Courses:</strong></p>
-            <ul style="margin-top: 8px;">
-                <li>Computational Modeling & Data Analysis I & II (CMSE 201, 202)</li>
-                <li>Probability & Statistics for Data Scientists (STT 380)</li>
-                <li>Algorithms & Data Structures (CSE 331)</li>
-                <li>Introduction to Data Science (STT 180)</li>
-                <li>Matrix Algebra I (MTH 314)</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>Associate of Science, Life Sciences</h3>
-            <h4>Mott Community College | Flint, MI</h4>
-            <p class="date">Graduated 2022 | GPA: 3.8/4.0</p>
-        </div>
-
-        <h2>Certifications</h2>
-
-        <div class="experience-item">
-            <ul>
-                <li><strong>Google Project Management Professional Certificate</strong> – November 2024</li>
-                <li><strong>NASM Certified Personal Trainer (CPT)</strong> – January 2018</li>
-            </ul>
-        </div>
-
-        <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee; color: #666;">
+        <footer>
             <p>References available upon request</p>
             <p style="margin-top: 10px;">East Lansing, MI 48823</p>
         </footer>
 
     </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            var tabContent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+
+            // Remove active class from all buttons
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show the selected tab and mark button as active
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
