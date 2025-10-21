@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            background: linear-gradient(135deg, #001f3f 0%, #003d7a 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -36,7 +36,7 @@
         }
 
         h1 {
-            color: #1e3a8a;
+            color: #001f3f;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
@@ -56,13 +56,13 @@
         }
 
         .contact-info a {
-            color: #1e3a8a;
+            color: #001f3f;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .contact-info a:hover {
-            color: #5eead4;
+            color: #3eb489;
         }
 
         /* Tab Navigation */
@@ -71,7 +71,7 @@
             justify-content: center;
             gap: 0;
             margin-bottom: 30px;
-            border-bottom: 2px solid #1e3a8a;
+            border-bottom: 2px solid #001f3f;
         }
 
         .tab-button {
@@ -81,7 +81,7 @@
             font-size: 1.1em;
             cursor: pointer;
             transition: all 0.3s;
-            color: #1e3a8a;
+            color: #001f3f;
             font-weight: 600;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
@@ -93,9 +93,9 @@
         }
 
         .tab-button.active {
-            background-color: #5eead4;
-            color: #1e3a8a;
-            border-bottom: 3px solid #1e3a8a;
+            background-color: #3eb489;
+            color: #001f3f;
+            border-bottom: 3px solid #001f3f;
         }
 
         .tab-content {
@@ -113,7 +113,7 @@
         }
 
         h2 {
-            color: #1e3a8a;
+            color: #001f3f;
             margin-top: 35px;
             margin-bottom: 15px;
             font-size: 1.8em;
@@ -135,11 +135,9 @@
         }
 
         .summary {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
+            background-color: transparent;
+            padding: 0;
             margin-bottom: 25px;
-            border-left: 4px solid #5eead4;
         }
 
         ul {
@@ -157,16 +155,20 @@
             content: "▹";
             position: absolute;
             left: 0;
-            color: #5eead4;
+            color: #3eb489;
             font-weight: bold;
         }
 
         .experience-item, .project-box {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border-left: 4px solid #5eead4;
+            background-color: transparent;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .experience-item p:not(.date) {
+            margin-top: 12px;
+            line-height: 1.7;
+            text-align: justify;
         }
 
         .date {
@@ -183,27 +185,25 @@
         }
 
         .skill-category {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 3px solid #5eead4;
+            background-color: transparent;
+            padding: 0;
         }
 
         .skill-category h4 {
-            color: #1e3a8a;
+            color: #001f3f;
             margin-bottom: 10px;
         }
 
         .metric {
-            color: #1e3a8a;
+            color: #001f3f;
             font-weight: bold;
         }
 
         a.download-btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #5eead4;
-            color: #1e3a8a;
+            background-color: #3eb489;
+            color: #001f3f;
             text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
@@ -213,7 +213,7 @@
         }
 
         a.download-btn:hover {
-            background-color: #4dd4be;
+            background-color: #2d9970;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
@@ -232,7 +232,7 @@
 
         .image-label {
             font-weight: 600;
-            color: #1e3a8a;
+            color: #001f3f;
             margin-bottom: 10px;
         }
 
@@ -245,8 +245,8 @@
 
         .event-badge {
             display: inline-block;
-            background-color: #5eead4;
-            color: #1e3a8a;
+            background-color: #3eb489;
+            color: #001f3f;
             padding: 4px 12px;
             border-radius: 12px;
             font-size: 0.85em;
@@ -262,21 +262,138 @@
         }
 
         .course-item {
-            background-color: #f8f9fa;
-            padding: 12px 15px;
-            border-radius: 6px;
-            border-left: 3px solid #5eead4;
+            background-color: transparent;
+            padding: 0;
+            margin-bottom: 12px;
         }
 
         .course-name {
             font-weight: 600;
-            color: #1e3a8a;
+            color: #001f3f;
             margin-bottom: 4px;
         }
 
         .course-relevance {
             color: #555;
             font-size: 0.95em;
+        }
+
+        .timeline-container {
+            margin: 30px 0;
+            padding: 30px 20px;
+            background-color: transparent;
+        }
+
+        .timeline {
+            position: relative;
+            min-height: 200px;
+            margin: 40px 0;
+            padding: 60px 0;
+        }
+
+        .timeline-bar {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            right: 5%;
+            height: 4px;
+            background: linear-gradient(to right, #001f3f, #3eb489);
+            border-radius: 2px;
+            transform: translateY(-50%);
+        }
+
+        .timeline-point {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 14px;
+            height: 14px;
+            background-color: #3eb489;
+            border: 3px solid #001f3f;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 2;
+        }
+
+        .timeline-point:hover {
+            width: 18px;
+            height: 18px;
+            background-color: #001f3f;
+        }
+
+        .timeline-event {
+            position: absolute;
+            width: 140px;
+            transform: translateX(-50%);
+        }
+
+        .timeline-event.above {
+            bottom: 55%;
+            margin-bottom: 20px;
+        }
+
+        .timeline-event.below {
+            top: 55%;
+            margin-top: 20px;
+        }
+
+        .timeline-year {
+            background-color: #001f3f;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .timeline-title {
+            background-color: white;
+            padding: 10px;
+            border-radius: 6px;
+            border: 2px solid #3eb489;
+            font-size: 0.85em;
+            color: #001f3f;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.3;
+        }
+
+        .timeline-company {
+            font-weight: 600;
+            padding-bottom: 6px;
+            margin-bottom: 6px;
+            border-bottom: 2px solid #3eb489;
+        }
+
+        .timeline-role {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .timeline-dates {
+            font-size: 0.8em;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            background-color: #001f3f;
+        }
+
+        .timeline-event.above .timeline-connector {
+            top: 100%;
+            height: 20px;
+        }
+
+        .timeline-event.below .timeline-connector {
+            bottom: 100%;
+            height: 20px;
         }
 
         @media (max-width: 768px) {
@@ -301,6 +418,26 @@
             .tab-button {
                 width: 100%;
                 border-radius: 8px;
+            }
+
+            .timeline {
+                min-height: 250px;
+                padding: 80px 0;
+            }
+
+            .timeline-event {
+                width: 110px;
+                font-size: 0.9em;
+            }
+
+            .timeline-year {
+                font-size: 0.8em;
+                padding: 3px 8px;
+            }
+
+            .timeline-title {
+                font-size: 0.75em;
+                padding: 8px 6px;
             }
         }
 
@@ -331,19 +468,327 @@
 
         <!-- Tab Navigation -->
         <div class="tab-navigation">
-            <button class="tab-button active" onclick="openTab(event, 'about')">About Mark</button>
+            <button class="tab-button active" onclick="openTab(event, 'experience')">Experience</button>
             <button class="tab-button" onclick="openTab(event, 'projects')">Projects</button>
-            <button class="tab-button" onclick="openTab(event, 'experience')">Experience</button>
+            <button class="tab-button" onclick="openTab(event, 'about')">About Mark</button>
+        </div>
+
+        <!-- Experience Tab -->
+        <div id="experience" class="tab-content active">
+            <h2>Experience Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-bar"></div>
+
+                    <!-- 2018: Texas Roadhouse -->
+                    <div class="timeline-event above" style="left: 10%;">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Texas Roadhouse</div>
+                            <div class="timeline-role">Food Service</div>
+                            <div class="timeline-dates">2018 - 2021</div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-point" style="left: 10%;"></div>
+
+                    <!-- 2020: Biovate LLC -->
+                    <div class="timeline-event below" style="left: 28%;">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Biovate LLC</div>
+                            <div class="timeline-role">Grant Analyst Intern</div>
+                            <div class="timeline-dates">May - Aug 2020</div>
+                        </div>
+                    </div>
+                    <div class="timeline-point" style="left: 28%;"></div>
+
+                    <!-- 2022: Noodles & Company -->
+                    <div class="timeline-event above" style="left: 42%;">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Noodles & Company</div>
+                            <div class="timeline-role">Food Service</div>
+                            <div class="timeline-dates">2022 - 2023</div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-point" style="left: 42%;"></div>
+
+                    <!-- 2023: MOTRE Lab -->
+                    <div class="timeline-event below" style="left: 50%;">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">MOTRE Lab, MSU</div>
+                            <div class="timeline-role">Research Assistant</div>
+                            <div class="timeline-dates">Jan 2023 - Apr 2024</div>
+                        </div>
+                    </div>
+                    <div class="timeline-point" style="left: 50%;"></div>
+
+                    <!-- 2023: Apollo Cooperative -->
+                    <div class="timeline-event above" style="left: 65%;">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Apollo Cooperative</div>
+                            <div class="timeline-role">Finance & Project Officer</div>
+                            <div class="timeline-dates">Feb 2023 - Sep 2025</div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-point" style="left: 65%;"></div>
+
+                    <!-- 2024: Apollo Housing Project -->
+                    <div class="timeline-event below" style="left: 80%;">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Apollo Housing</div>
+                            <div class="timeline-role">Analytics Project</div>
+                            <div class="timeline-dates">Oct 2024 - Present</div>
+                        </div>
+                    </div>
+                    <div class="timeline-point" style="left: 80%;"></div>
+
+                    <!-- Present marker -->
+                    <div class="timeline-event above" style="left: 95%;">
+                        <div class="timeline-year">Present</div>
+                        <div class="timeline-title">
+                            <div class="timeline-role">2025</div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-point" style="left: 95%;"></div>
+                </div>
+            </div>
+
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <h3>Finance & Project Officer</h3>
+                <h4>Apollo Cooperative (SHC) | East Lansing, MI</h4>
+                <p class="date">February 2023 – September 2025</p>
+                <p>Managed financial operations and project coordination for an 18-member cooperative housing organization. Built <strong>Tableau dashboards</strong> for chore tracking and reporting while maintaining budgets, audits, and utility management using <strong>Excel</strong>. Led <strong>30+ projects</strong> using <strong>Agile methodologies</strong> for team coordination and sprint planning. Presented bi-monthly metrics and updates in house meetings to enhance transparency and accountability. Served as primary liaison with the Spartan Housing Cooperative to resolve complex financial and facilities issues.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Research Assistant</h3>
+                <h4>MOTRE Lab, Michigan State University (PI: Dr. Rajiv Ranganathan) | East Lansing, MI</h4>
+                <p class="date">January 2023 – April 2024</p>
+                <p>Conducted exploratory research in motor learning and cognitive neuroscience within a collaborative laboratory environment. Extracted and analyzed experimental task data using <strong>Excel</strong> from scientific literature, evaluating <strong>64 task paradigms</strong> via Likert-scale assessment. Piloted graduate-level experiments to support peer research and hypothesis testing. Created <strong>PowerPoint presentations</strong> to disseminate key findings to the lab team, culminating in a poster presentation at MSU's Undergraduate Research and Arts Forum (UURAF).</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Grant Analyst Intern</h3>
+                <h4>Biovate LLC | Cambridge, MA</h4>
+                <p class="date">May 2020 – August 2020</p>
+                <p>Supported biotech consulting operations through systematic data analysis and market intelligence. Extracted and analyzed <strong>NIH RePORTER datasets</strong> on <strong>100+ life science companies</strong> that received SBIR/STTR awards, identifying geographic and technology trends. Prepared and presented weekly visual reports using <strong>Excel</strong> to facilitate insightful trend analysis, guiding the firm's biotech outreach strategy and client engagement efforts.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Food Service Team Member</h3>
+                <h4>Noodles & Company | East Lansing, MI</h4>
+                <p class="date">July 2022 – March 2023</p>
+                <p>Delivered quality food service in a fast-paced restaurant environment, preparing <strong>50+ meals per shift</strong> while maintaining strict attention to quality, timing, and food safety standards. Collaborated with kitchen and front-of-house teams to streamline workflows, reducing preparation time and minimizing food waste. Consistently maintained customer satisfaction during high-volume service periods through effective <strong>time management</strong> and <strong>teamwork</strong>.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Food Service Team Member</h3>
+                <h4>Texas Roadhouse | Grand Junction, CO; Cheyenne, WY; Flint, MI</h4>
+                <p class="date">June 2018 – January 2021</p>
+                <p>Delivered high-quality service across multiple locations and roles including busser, server, and food runner, serving <strong>200+ guests per shift</strong> in high-volume restaurant environments. Trained and onboarded new team members while maintaining consistent service standards across <strong>three locations</strong> in different states. Demonstrated strong <strong>adaptability</strong> and <strong>leadership</strong> capabilities by successfully transferring skills and knowledge across diverse teams and regional markets throughout a multi-year tenure.</p>
+            </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div id="projects" class="tab-content">
+            <h2>Projects Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-bar"></div>
+
+                    <!-- 2020: Biovate Grant Analysis -->
+                    <div class="timeline-event above" style="left: 10%;">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Biovate LLC</div>
+                            <div class="timeline-role">Grant Analysis</div>
+                            <div class="timeline-dates">May - Aug 2020</div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-point" style="left: 10%;"></div>
+
+                    <!-- 2024: UURAF Poster -->
+                    <div class="timeline-event below" style="left: 30%;">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Breaking Fragmentation</div>
+                            <div class="timeline-role">UURAF Poster</div>
+                            <div class="timeline-dates">March 2024</div>
+                        </div>
+                    </div>
+                    <div class="timeline-point" style="left: 30%;"></div>
+
+                    <!-- 2025: Trading Bot -->
+                    <div class="timeline-event above" style="left: 45%;">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Trading Bot</div>
+                            <div class="timeline-role">Independent Project</div>
+                            <div class="timeline-dates">May 2025 - Present</div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-point" style="left: 45%;"></div>
+
+                    <!-- 2024-Present: Apollo Housing Analytics -->
+                    <div class="timeline-event below" style="left: 60%;">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Apollo Cooperative</div>
+                            <div class="timeline-role">Chore Analytics</div>
+                            <div class="timeline-dates">Oct 2024 - Present</div>
+                        </div>
+                    </div>
+                    <div class="timeline-point" style="left: 60%;"></div>
+
+                    <!-- 2025: Harvard Hackathon -->
+                    <div class="timeline-event above" style="left: 76%;">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">Harvard Hackathon</div>
+                            <div class="timeline-role">Rare Disease LLM</div>
+                            <div class="timeline-dates">March 2025</div>
+                        </div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-point" style="left: 76%;"></div>
+
+                    <!-- 2025: MSU Broad Datathon -->
+                    <div class="timeline-event below" style="left: 92%;">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-title">
+                            <div class="timeline-company">MSU Broad Datathon</div>
+                            <div class="timeline-role">Supply Chain Dashboard</div>
+                            <div class="timeline-dates">September 2025</div>
+                        </div>
+                    </div>
+                    <div class="timeline-point" style="left: 92%;"></div>
+                </div>
+            </div>
+
+            <h2>Featured Projects</h2>
+
+            <div class="project-box">
+                <h3>Algorithmic Trading Bot</h3>
+                <p class="date">May 2025 – Present | Independent Project with Senior Developer Mentorship</p>
+                <p>Developing a modular cryptocurrency trading system in <strong>Python</strong> featuring comprehensive <strong>ETL (Extract, Transform, Load) pipelines</strong> for real-time and historical market data. The <strong>ETL architecture</strong> extracts granular price data via <strong>REST and WebSocket APIs</strong>, transforms raw market feeds into structured datasets using <strong>pandas</strong> and <strong>NumPy</strong>, and loads processed data into optimized storage for backtesting and live trading. Implemented <strong>feature engineering</strong> workflows, <strong>backtesting frameworks</strong>, and strategy harness enabling rapid <strong>A/B testing</strong> and algorithm prototyping. Visualized price patterns and trading signals using <strong>Vega-Altair</strong> to analyze system performance across high-volatility market conditions.</p>
+                <div style="margin-top: 20px;">
+                    <p class="image-label">Granular Price Data Using Vega-Altair:</p>
+                    <div class="image-container">
+                        <img src="assets/trading_bot_altair_vega_graph.png" alt="Trading Bot Visualization Using Vega-Altair">
+                    </div>
+                    <p class="image-label" style="margin-top: 20px;">Project Artifacts:</p>
+                    <p class="note">Note: This is an example draft, not the code actually used.</p>
+                    <div style="text-align: center;">
+                        <a href="assets/trading_bot_simple_backtester_code.py" download class="download-btn">
+                            Download Backtester Code (.py)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <h3>Breaking Fragmentation: A Standard Approach to Motor Learning</h3>
+                <p class="date">March 2024 | Presented at UURAF</p>
+                <p>Conducted comprehensive evaluation of <strong>64 motor learning task paradigms</strong> extracted from scientific literature, assessing each on reproducibility, scalability, and experimental rigor using standardized Likert-scale metrics. Performed all <strong>analysis and visualization in Excel</strong>, leveraging <strong>pivot tables</strong>, <strong>advanced charting capabilities</strong>, and <strong>statistical functions</strong> to identify patterns and trends across the motor learning research landscape. The <strong>Excel-based workflow</strong> enabled systematic data organization, quantitative scoring, and visual synthesis of research findings. Synthesized findings into a standardized framework proposing best practices for task selection in motor learning experiments. Presented results via poster presentation at MSU's Undergraduate Research and Arts Forum (UURAF), communicating complex research findings to diverse academic audiences.</p>
+                <div style="margin-top: 20px;">
+                    <p class="image-label">Final Poster Draft:</p>
+                    <div class="image-container">
+                        <img src="assets/uuraf_photo_2.png" alt="Breaking Fragmentation Final Poster">
+                    </div>
+                    <p class="image-label" style="margin-top: 20px;">Precursor Draft:</p>
+                    <div class="image-container">
+                        <img src="assets/uuraf_photo_3.png" alt="Breaking Fragmentation Precursor Draft">
+                    </div>
+                    <p class="image-label" style="margin-top: 20px;">Project Artifact:</p>
+                    <div style="text-align: center;">
+                        <a href="assets/uuraf_spreadsheet.xlsx" download class="download-btn">
+                            Download Analysis Spreadsheet (.xlsx)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <h3>Interactive Supply Chain Dashboarding & MAPE Tracking</h3>
+                <p class="date">September 2025<span class="event-badge">MSU Broad Datathon</span></p>
+                <p>Prototyped an interactive dashboard solution for Connected Midland's supply chain management platform using <strong>Excel</strong>, <strong>Tableau-style visualizations</strong>, and <strong>Power BI</strong>. Implemented <strong>key performance indicators</strong> including on-time delivery percentage, delay counts, and forecast error metrics (<strong>MAPE - Mean Absolute Percentage Error</strong>) with dynamic slicers and parameter controls for flexible data exploration. Performed initial <strong>data cleaning and analysis in Excel</strong> before building visualizations, ensuring data quality and metric accuracy. Designed user-friendly interface prioritizing clarity and actionability for supply chain decision-makers. Proposed comprehensive data-validation rubric and weekly data refresh schedule to improve platform trust and drive user adoption across the organization.</p>
+                <div style="margin-top: 20px;">
+                    <p class="image-label">Building a User-Friendly Dashboard:</p>
+                    <div class="image-container">
+                        <img src="assets/broad_datathon_visual.png" alt="Broad Datathon Dashboard Visualization">
+                    </div>
+                    <p class="image-label" style="margin-top: 20px;">Project Artifacts:</p>
+                    <div style="text-align: center;">
+                        <a href="assets/broad_datathon_case_file.pdf" download class="download-btn">
+                            Download Case File (.pdf)
+                        </a>
+                        <a href="assets/broad_datathon_slide_deck.pdf" download class="download-btn">
+                            Download Slide Deck (.pdf)
+                        </a>
+                        <a href="assets/broad_datathon_BI_file.pbix" download class="download-btn">
+                            Download Power BI File (.pbix)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <h3>Apollo Housing Management: Financial & Task Analytics</h3>
+                <p class="date">Ongoing | October 2024 – Present</p>
+                <p>Ongoing analytics initiative focused on operational improvement for cooperative housing management. Collaborated with Spartan Housing Cooperative (SHC) treasurer to analyze <strong>fair market rent</strong> as a proxy metric for housing affordability, providing data-driven insights for rental pricing strategies. Produced <strong>dashboards</strong> tracking financial trends, utility usage patterns, and chore adoption rates across the <strong>18-member cooperative household</strong>. Delivered comprehensive <strong>markdown report</strong> to SHC leadership documenting findings and recommending operational improvements based on <strong>quantitative analysis</strong> of household operations and member engagement patterns.</p>
+            </div>
+
+            <div class="project-box">
+                <h3>LLM Framework for Rare Disease Mechanism Mapping</h3>
+                <p class="date">March 2025<span class="event-badge">Harvard Hackathon</span></p>
+                <p>Collaborated within a <strong>5-person team</strong> to develop an <strong>NLP-based large language model (LLM)</strong> tool using <strong>Python</strong> for automated classification of gene-disease mechanisms and matching therapeutic approaches. The framework streamlines pre-IND (Investigational New Drug) drug discovery processes through automated extraction and analysis of biomedical literature and research databases. Utilized <strong>Git</strong> for version control and cloud-based development tools for team coordination during the hackathon. Solution addressed critical bottleneck in rare disease research by accelerating the identification of potential therapeutic targets and mechanism-of-action pathways.</p>
+                <div style="margin-top: 20px;">
+                    <p class="image-label">Project Artifacts:</p>
+                    <div style="text-align: center;">
+                        <a href="assets/hack_rare_slide_deck.pdf" download class="download-btn">
+                            Download Slide Deck (.pdf)
+                        </a>
+                        <a href="assets/hack_rare_readme.md" download class="download-btn">
+                            Download README (.md)
+                        </a>
+                        <a href="assets/hack_rare_semantic_api.ipynb" download class="download-btn">
+                            Download Semantic API Notebook (.ipynb)
+                        </a>
+                        <a href="assets/hack_rare_semantic_scholar_extraction.csv" download class="download-btn">
+                            Download Data Extraction (.csv)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- About Mark Tab -->
-        <div id="about" class="tab-content active">
+        <div id="about" class="tab-content">
             <h2>Professional Summary</h2>
             <div class="summary">
                 <p>
                     Data science student with hands-on experience building dashboards, analyzing data, and coordinating multi-stakeholder projects.
                     Demonstrated ability to translate ambiguous requirements into clear metrics, timelines, and actionable insights.
-                    Proficient with Python, Excel, Tableau, and SQL. Proven track record managing <span class="metric">30+ projects</span>
+                    Proficient with <strong>Python</strong>, <strong>Excel</strong>, <strong>Tableau</strong>, <strong>Power BI</strong>, and <strong>SQL</strong>. Proven track record managing <strong>30+ projects</strong>
                     and delivering data-driven solutions across research, finance, and analytics domains.
                 </p>
             </div>
@@ -364,6 +809,7 @@
                     <h4>Data Tools & Platforms</h4>
                     <ul>
                         <li>Tableau dashboards</li>
+                        <li>Power BI</li>
                         <li>Excel analysis & visualization</li>
                         <li>API data extraction</li>
                         <li>Statistical modeling</li>
@@ -396,10 +842,6 @@
                     <div class="course-relevance">Advanced computational modeling, simulation, and data analysis workflows</div>
                 </div>
                 <div class="course-item">
-                    <div class="course-name">Introduction to Data Science (STT 180)</div>
-                    <div class="course-relevance">Data wrangling, visualization, exploratory analysis, and statistical methods</div>
-                </div>
-                <div class="course-item">
                     <div class="course-name">Probability & Statistics for Data Scientists (STT 380)</div>
                     <div class="course-relevance">Statistical inference, hypothesis testing, and probability theory for data analysis</div>
                 </div>
@@ -408,186 +850,21 @@
                     <div class="course-relevance">Computational complexity, algorithm design, and efficient data structure implementation</div>
                 </div>
                 <div class="course-item">
-                    <div class="course-name">Matrix Algebra I (MTH 314)</div>
+                    <div class="course-name">Linear Algebra I (MTH 309)</div>
+                    <div class="course-relevance">Advanced linear algebra including eigenvalues, vector spaces, and transformations for data science applications</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Matrix Algebra (MTH 314)</div>
                     <div class="course-relevance">Linear algebra foundations for machine learning and data transformations</div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Projects Tab -->
-        <div id="projects" class="tab-content">
-            <h2>Featured Projects</h2>
-
-            <div class="project-box">
-                <h3>Algorithmic Trading in High-Volatility Markets</h3>
-                <p class="date">2024 | Independent Project with Senior Developer Mentorship</p>
-                <ul>
-                    <li>Built modular cryptocurrency trading bot in <span class="metric">Python</span> with <span class="metric">ETL pipelines</span> for data ingestion via REST/WebSocket APIs</li>
-                    <li>Implemented feature engineering, backtesting, and strategy harness for rapid A/B prototyping</li>
-                    <li>Managed data structures and pipelines for reliability and speed in high-volatility markets</li>
-                </ul>
-                <div style="margin-top: 20px;">
-                    <p class="image-label">Granular Price Data Using Vega-Altair:</p>
-                    <div class="image-container">
-                        <img src="assets/trading_bot_altair_vega_graph.png" alt="Trading Bot Visualization Using Vega-Altair">
-                    </div>
-                    <p class="image-label" style="margin-top: 20px;">Project Artifacts:</p>
-                    <p class="note">Note: This is an example draft, not the code actually used.</p>
-                    <div style="text-align: center;">
-                        <a href="assets/trading_bot_simple_backtester_code.py" download class="download-btn">
-                            Download Backtester Code (.py)
-                        </a>
-                    </div>
+                <div class="course-item">
+                    <div class="course-name">Systems Design and Analysis (ITM 311)</div>
+                    <div class="course-relevance">IT systems architecture, requirements analysis, and project lifecycle management</div>
                 </div>
-            </div>
-
-            <div class="project-box">
-                <h3>Breaking Fragmentation: A Standard Approach to Motor Learning</h3>
-                <p class="date">March 2024 | Presented at UURAF</p>
-                <ul>
-                    <li>Evaluated <span class="metric">64 motor learning tasks</span> on reproducibility, scalability, and experimental rigor using Likert-scale metrics</li>
-                    <li>Performed analysis and visualization in <span class="metric">Excel</span>; synthesized findings into standardized framework</li>
-                    <li>Presented poster at MSU's Undergraduate Research and Arts Forum</li>
-                </ul>
-                <div style="margin-top: 20px;">
-                    <p class="image-label">Final Poster Draft:</p>
-                    <div class="image-container">
-                        <img src="assets/uuraf_photo_2.png" alt="Breaking Fragmentation Final Poster">
-                    </div>
-                    <p class="image-label" style="margin-top: 20px;">Precursor Draft:</p>
-                    <div class="image-container">
-                        <img src="assets/uuraf_photo_3.png" alt="Breaking Fragmentation Precursor Draft">
-                    </div>
-                    <p class="image-label" style="margin-top: 20px;">Project Artifact:</p>
-                    <div style="text-align: center;">
-                        <a href="assets/uuraf_spreadsheet.xlsx" download class="download-btn">
-                            Download Analysis Spreadsheet (.xlsx)
-                        </a>
-                    </div>
+                <div class="course-item">
+                    <div class="course-name">Introduction to Data Science (STT 180)</div>
+                    <div class="course-relevance">Data wrangling, visualization, exploratory analysis, and statistical methods</div>
                 </div>
-            </div>
-
-            <div class="project-box">
-                <h3>Interactive Supply Chain Dashboarding & MAPE Tracking</h3>
-                <p class="date">September 2025<span class="event-badge">MSU Broad Datathon</span></p>
-                <ul>
-                    <li>Prototyped interactive dashboard for Connected Midland's supply chain platform using Tableau-style visualizations</li>
-                    <li>Implemented KPIs (on-time delivery %, delay counts, forecast error/MAPE) with slicers and parameter controls</li>
-                    <li>Proposed data-validation rubric and weekly refresh to improve trust and user adoption</li>
-                </ul>
-                <div style="margin-top: 20px;">
-                    <p class="image-label">Building a User-Friendly Dashboard:</p>
-                    <div class="image-container">
-                        <img src="assets/broad_datathon_visual.png" alt="Broad Datathon Dashboard Visualization">
-                    </div>
-                    <p class="image-label" style="margin-top: 20px;">Project Artifacts:</p>
-                    <div style="text-align: center;">
-                        <a href="assets/broad_datathon_case_file.pdf" download class="download-btn">
-                            Download Case File (.pdf)
-                        </a>
-                        <a href="assets/broad_datathon_slide_deck.pdf" download class="download-btn">
-                            Download Slide Deck (.pdf)
-                        </a>
-                        <a href="assets/broad_datathon_BI_file.pbix" download class="download-btn">
-                            Download Power BI File (.pbix)
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-box">
-                <h3>LLM Framework for Rare Disease Mechanism Mapping</h3>
-                <p class="date">March 2025<span class="event-badge">Harvard Hackathon</span></p>
-                <ul>
-                    <li>Collaborated in <span class="metric">5-person team</span> to develop NLP LLM-based tool with <span class="metric">Python</span> for classifying gene-disease mechanisms and matching therapies</li>
-                    <li>Streamlined pre-IND drug discovery through automated data extraction and analysis</li>
-                    <li>Collaborated via Git and cloud-based development tools</li>
-                </ul>
-                <div style="margin-top: 20px;">
-                    <p class="image-label">Project Artifacts:</p>
-                    <div style="text-align: center;">
-                        <a href="assets/hack_rare_slide_deck.pdf" download class="download-btn">
-                            Download Slide Deck (.pdf)
-                        </a>
-                        <a href="assets/hack_rare_readme.md" download class="download-btn">
-                            Download README (.md)
-                        </a>
-                        <a href="assets/hack_rare_semantic_api.ipynb" download class="download-btn">
-                            Download Semantic API Notebook (.ipynb)
-                        </a>
-                        <a href="assets/hack_rare_semantic_scholar_extraction.csv" download class="download-btn">
-                            Download Data Extraction (.csv)
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-box">
-                <h3>Apollo Housing Management: Financial & Task Analytics</h3>
-                <p class="date">Ongoing | October 2024 – Present</p>
-                <ul>
-                    <li>Collaborated with SHC treasurer to analyze fair market rent as proxy for housing affordability</li>
-                    <li>Produced dashboards tracking financial trends, utility usage, and chore adoption across <span class="metric">18-member</span> home</li>
-                    <li>Delivered <span class="metric">1 markdown report</span> to Spartan Housing Cooperative with data-driven insights for operational improvements</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Experience Tab -->
-        <div id="experience" class="tab-content">
-            <h2>Experience</h2>
-
-            <div class="experience-item">
-                <h3>Finance & Project Officer</h3>
-                <h4>Apollo Cooperative (SHC) | East Lansing, MI</h4>
-                <p class="date">February 2023 – September 2025</p>
-                <ul>
-                    <li>Built dashboards in <span class="metric">Tableau</span> for house member chore tracking and reporting</li>
-                    <li>Managed audits, utilities, and budgets using <span class="metric">Excel</span></li>
-                    <li>Led <span class="metric">30+ projects</span> using <span class="metric">Agile methods</span> for team coordination and small-scale sprints</li>
-                    <li>Presented metrics and updates in recurring house meetings</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Research Assistant</h3>
-                <h4>MOTRE Lab, Michigan State University (PI: Dr. Rajiv Ranganathan) | East Lansing, MI</h4>
-                <p class="date">January 2023 – April 2024</p>
-                <ul>
-                    <li>Extracted and analyzed experimental task data with <span class="metric">Excel</span> from scientific literature</li>
-                    <li>Supported peer experimental design and hypothesis testing by piloting experiments</li>
-                    <li>Visualized research via lab PowerPoint presentations, culminating in poster at major university symposium</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Grant Analyst Intern</h3>
-                <h4>Biovate LLC | Cambridge, MA</h4>
-                <p class="date">May 2020 – August 2020</p>
-                <ul>
-                    <li>Analyzed NIH RePORTER data on <span class="metric">100+ biotech firms</span> using <span class="metric">Excel</span></li>
-                    <li>Produced weekly visual reports on funding trends to guide biotech outreach strategy</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Food Service Team Member</h3>
-                <h4>Noodles & Company | East Lansing, MI</h4>
-                <p class="date">July 2022 – March 2023</p>
-                <ul>
-                    <li>Prepared <span class="metric">50+ meals per shift</span> with consistent attention to quality, timing, and food safety standards</li>
-                    <li>Collaborated with team to streamline workflow, reducing prep time and food waste</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Food Service Team Member</h3>
-                <h4>Texas Roadhouse | Grand Junction, CO; Cheyenne, WY; Flint, MI</h4>
-                <p class="date">June 2018 – January 2021</p>
-                <ul>
-                    <li>Delivered high-quality service across multiple roles (busser, server, food runner) serving <span class="metric">200+ guests per shift</span></li>
-                    <li>Trained and onboarded new staff, maintaining consistent service standards across locations</li>
-                </ul>
             </div>
         </div>
 

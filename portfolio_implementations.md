@@ -30,6 +30,7 @@
 
   * Color palette: navy + mint.
   * No section boundary color (keep section dividers neutral/minimal).
+  * Do not show the background box of each section. The section should blend in seamlessly with the white background. This includes the green border on the left.
 
 
 
@@ -48,18 +49,30 @@
 
   * Include food service roles under Experience.
   * Update dates:
-  * Apollo role: ended September 2025.
-  * Apollo house management project: ongoing.
-  * Note: delivered one markdown report to the Spartan Housing Cooperative (SHC).
+    * Apollo role: ended September 2025.
+    * Apollo house management project: ongoing.
+    * Note: delivered one markdown report to the Spartan Housing Cooperative (SHC).
+  * Read example_timeline.jpg
+  * In the experience section, display a timeline of experience since the first entry to the last entry. Each point should be annotated with the experience title similar to the prior jpg image. 
+    * In the boxes, use a line to separate workplace from role title.
+    * Also display when the roles ended
+    * Make sure that Apollo and MOTRE lab are separate.
+    * Omit the "Apollo Housing" annotation box in this experience timeline. It is overlapping with the "Present" box.
+  * Instead of bullet-points, structure the descriptions as summaries.
+  * Bolden keywords that relate to skills.
 
 
 
   5. Projects Content
 
 
-
+  * Above all other projects, display a timeline that copies the format of the one in the experience section.
+    * Replace "Apollo Housing" with Apollo Cooperative and "Analytics Project" with "Chore Analytics."
   * Algorithmic Trading Bot
-  * Tech: Python; explicitly mention ETL.
+    * Tech: Python; explicitly mention ETL.
+    * Started in May, 2025 and is ongoing (apply to timeline)
+  * Bolden keywords that relate to skills.
+  
 
 
 
@@ -96,8 +109,9 @@
 
 
   * Rename “Relevant Coursework:” → “Technical Courses:”.
-  * From msu\_unofficial\_transcript\_101525.pdf, list the top 5 courses most aligned with a data professional.
+  * From msu\_unofficial\_transcript\_101525.pdf, list the top 5-10 courses most aligned with a data professional.
   * Present as a neatly organized short list (not crammed), e.g., bullet list or compact two-column layout with course name → brief relevance.
+  * I'm taking MTH 309 (Linear algebra) right now as well as ITM 311 (Systems Design and Analysis). Feel free to add these.
 
 
 

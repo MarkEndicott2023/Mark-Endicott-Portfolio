@@ -1,1 +1,1 @@
-read portfolio-implementations then run the implementations
+read portfolio-implementations, scan it for non-implemented changes, then implement the missing changes.
