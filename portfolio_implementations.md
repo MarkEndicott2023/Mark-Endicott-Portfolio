@@ -125,3 +125,11 @@
 
 
 
+
+
+  8. Corrections (2026-09-17) — implemented
+
+  * Biovate: removed the "100+ life science companies" count. Source data is not available to verify it; the resume drops the count for the same reason.
+  * Education: "Expected December 2026 | GPA 3.25" → "Expected May 2027 | GPA 3.28" (transcript printed 07/13/2026, cum GPA 3.283).
+  * LinkedIn link: slug corrected to markendicott-8091011b0 (per the LinkedIn export in resume_drafts).
+  * Not yet reflected: Permiscape (Apr 2026 – present) is absent from Experience and Projects.
