@@ -132,4 +132,11 @@
   * Biovate: removed the "100+ life science companies" count. Source data is not available to verify it; the resume drops the count for the same reason.
   * Education: "Expected December 2026 | GPA 3.25" → "Expected May 2027 | GPA 3.28" (transcript printed 07/13/2026, cum GPA 3.283).
   * LinkedIn link: slug corrected to markendicott-8091011b0 (per the LinkedIn export in resume_drafts).
-  * Not yet reflected: Permiscape (Apr 2026 – present) is absent from Experience and Projects.
+  * Permiscape (Apr 2026 – present) added as the first Experience entry and as the 2026 timeline box, replacing the "Apollo Housing" box the spec asked to omit.
+  * Apollo: removed "Led 30+ projects"; summary: removed "managing 30+ projects" and downgraded SQL from proficient to working knowledge.
+  * Trading bot: end date set to 2026 (project post-mortem 2026-08-28); description rewritten to match the backtester artifact (Polars/pandas/NumPy harness, slippage/fee modeling, buy-and-hold benchmark, Vega-Altair). Dropped live trading, WebSocket, A/B testing, feature engineering, and "optimized storage" claims.
+  * Skills: removed "ETL pipelines" and "Statistical modeling"; added matplotlib and SQL flavors.
+  * Technical Courses: added CMSE 381, CMSE 402, CMSE 404 (Spring 2026) and CSE 482 (in progress).
+  * Timeline "Present" marker year: 2025 → 2026.
+  * Security rule (Mark, 2026-09-17): the portfolio must not describe what the Permiscape product does or its market. Entry names the company and the work only.
+  * Open: Apollo Housing analytics project still reads "October 2024 – Present". Confirm or end-date it.
