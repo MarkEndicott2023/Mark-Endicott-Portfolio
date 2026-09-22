@@ -140,3 +140,12 @@
   * Timeline "Present" marker year: 2025 → 2026.
   * Security rule (Mark, 2026-09-17): the portfolio must not describe what the Permiscape product does or its market. Entry names the company and the work only.
   * Open: Apollo Housing analytics project still reads "October 2024 – Present". Confirm or end-date it.
+
+  9. Updates (2026-09-22) — implemented
+
+  * LinkedIn link: slug changed to mendicott0 (Mark, 2026-09-22). Also applied to docs/career/da_resume_091726.md and .html in the zenithar repo; the PDF still needs regenerating.
+  * Personal training added (Mark, 2026-09-22). Sources: 040225 General Resume, 122124 Tech Resume V3, and the LinkedIn export in resume_drafts.
+    * Experience: State of Fitness, Personal Training Intern, May–Jul 2024, East Lansing, MI (LinkedIn export says Lansing). 170 hours; exercise programming, client coaching, workout plans, client tracking, one-on-one and group sessions. Placed after Permiscape.
+    * Experience timeline: 2024 State of Fitness box added; all eight points re-spaced (8/22/36/48/60/72/84/95%) with above/below alternation kept. Permiscape moved to above, Present to below.
+    * About: new Certifications section under Education — NASM Certified Personal Trainer (Jan 2018) and Google Project Management Specialization (Nov 2024).
+  * Personal training was NOT added to the DA resume; it is off-target for data roles and the resume weights roles by relevance.
