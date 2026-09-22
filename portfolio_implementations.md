@@ -149,3 +149,5 @@
     * Experience timeline: 2024 State of Fitness box added; all eight points re-spaced (8/22/36/48/60/72/84/95%) with above/below alternation kept. Permiscape moved to above, Present to below.
     * About: new Certifications section under Education — NASM Certified Personal Trainer (Jan 2018) and Google Project Management Specialization (Nov 2024).
   * Personal training was NOT added to the DA resume; it is off-target for data roles and the resume weights roles by relevance.
+  * Permiscape ended 2026-08-31 (Mark, 2026-09-22). Timeline box now "Apr - Aug 2026", entry "April 2026 – August 2026". Same change applied to the DA resume .md and .html; PDF still stale.
+  * Bored with Biotech / perturb-response-lab: assessed 2026-09-22, NOT added. Repo is private; Mark created the bored-with-biotech org and repo and transferred ownership to Casey. No scored run exists yet. Mark chose to wait (2026-09-22). Revisit when milestone 1 (primed vs. plain on held-out targets, with baselines) has a logged result.
